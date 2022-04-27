@@ -19,6 +19,7 @@ int main(int argc, char const *argv[]) {
   std::cin >> endConfig;
   std::cout << "-------------------------------------" << std::endl;
 
+  Board_Tile bt(initConfig);
 
   return 0;
 }

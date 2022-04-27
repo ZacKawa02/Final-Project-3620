@@ -15,7 +15,7 @@ class Board_Tile {
   /*
   * Constructor takes a beginning configuration and creates the starting board
   */
-  Board_Tile(const std::string&);
+  Board_Tile(const std::string& start);
 
   /*
   * Returns a list of all possible next moves (excluding useless moves that
@@ -33,6 +33,11 @@ class Board_Tile {
   * compared to the desired final configuration of the board
   */
   int Manhattan_Distance(const Board_Tile& goalconfig);
+
+  /*
+  * returns the string stored in config
+  */
+  std::string getConfig();
 
  private:
 
