@@ -18,6 +18,7 @@
      std::cout << "Current Board: " << config << std::endl;
      for (unsigned int i = 0; i < 3; i++) {
        //Generate the next potential boards and put them into the vector
+       //Don't include the previous move or moves that go off the board!
      }
    }
 
