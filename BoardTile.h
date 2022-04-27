@@ -34,13 +34,6 @@ class Board_Tile {
   */
   int Manhattan_Distance(const Board_Tile& goalconfig);
 
-  /*
-  * actually carries out the next move updating the Board_Tile object's current
-  * config and the movesFromStart string to accurately reflect the board's
-  * current state and what moves have been done
-  */
-  void doMove();
-
  private:
 
   std::string config;
