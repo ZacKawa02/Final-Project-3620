@@ -22,7 +22,7 @@ int main(int argc, char const *argv[]) {
   Board_Tile starter(initConfig);
   Board_Tile ender(endConfig);
 
-  cout << Manhattan_Distance(ender);
+  std::cout << Board_Tile::Manhattan_Distance(&ender);
 
   return 0;
 }
