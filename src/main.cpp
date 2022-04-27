@@ -19,7 +19,10 @@ int main(int argc, char const *argv[]) {
   std::cin >> endConfig;
   std::cout << "-------------------------------------" << std::endl;
 
-  Board_Tile bt(initConfig);
+  Board_Tile starter(initConfig);
+  Board_Tile ender(endConfig);
+
+  cout << Manhattan_Distance(ender);
 
   return 0;
 }
