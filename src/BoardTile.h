@@ -39,6 +39,37 @@ class Board_Tile {
   */
   std::string getConfig();
 
+  /*
+  * pritns out our tiles all nice like for the user
+  */
+  void print();
+
+  /*
+  * finds where the blank space (0) is
+  */
+  int findBlank();
+
+  /*
+  * Moves the blank space (0) left
+  */
+  void moveLeft(int blank);
+
+  /*
+  * Moves the blank space (0) right
+  */
+  void moveRight(int blank);
+
+  /*
+  * Moves the blank space (0) up
+  */
+  void moveUp(int blank);
+
+  /*
+  * Moves the blank space (0) down
+  */
+  void moveDown(int blank);
+
+
  private:
 
   std::string config;

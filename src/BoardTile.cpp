@@ -81,3 +81,46 @@
    std::string Board_Tile::getConfig() {
      return config;
    }
+
+   void Board_Tile::print() {
+   	std::cout << "string: " << config << std::endl;
+   	std::cout << config.at(0) << " " << config.at(2) << " " << config.at(4) << std::endl;
+   	std::cout << config.at(6) << " " << config.at(8) << " " << config.at(10) << std::endl;
+   	std::cout << config.at(12) << " " << config.at(14) << " " << config.at(16) << std::endl << std::endl;
+   }
+
+   void Board_Tile::moveLeft(int blank) {
+   	char temp = config.at(blank - 2);
+   	char empty = config.at(blank);
+   	config.erase(blank, 1);
+   	config.insert(blank, 1, temp);
+   	config.erase(blank - 2, 1);
+   	config.insert(blank - 2, 1, empty);
+   }
+
+   void Board_Tile::moveRight(int blank) {
+   	char temp = config.at(blank + 2);
+   	char empty = config.at(blank);
+   	config.erase(blank, 1);
+   	config.insert(blank, 1, temp);
+   	config.erase(blank + 2, 1);
+   	config.insert(blank + 2, 1, empty);
+   }
+
+   void Board_Tile::moveUp(int blank) {
+   	char temp = config.at(blank - 6);
+   	char empty = config.at(blank);
+   	config.erase(blank, 1);
+   	config.insert(blank, 1, temp);
+   	config.erase(blank - 6, 1);
+   	config.insert(blank - 6, 1, empty);
+   }
+
+   void Board_Tile::moveDown(int blank) {
+   	char temp = config.at(blank + 6);
+   	char empty = config.at(blank);
+   	config.erase(blank, 1);
+   	config.insert(blank, 1, temp);
+   	config.erase(blank + 6, 1);
+   	config.insert(blank + 6, 1, empty);
+   }
