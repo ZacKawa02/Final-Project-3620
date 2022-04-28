@@ -34,7 +34,7 @@
      for (unsigned int i = 0; i < 9; i++) {
        for (unsigned int j = 0; j < 9; j++) {
          // The "missing" tile isn't counted in Manhattan Distance calculations
-         if (goalString.at(i) == "0" || goalString.at(i) == config.at(i)) {
+         if (goalString.at(2*i) == "0" || goalString.at(2*i) == config.at(2*i)) {
            manDist += 0;
          }
          int distDefine = j - i;

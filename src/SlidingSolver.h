@@ -21,8 +21,7 @@ class Sliding_Solver {
   Sliding_Solver(std::string startConfig, std::string endConfig);
 
   /*
-  * Solves the puzzle using A* Search... I guess... irdk how that works...
-  * Seems pretty in depth for a single function...
+  * Solves the puzzle using A* Search
   */
   void Solve_Puzzle();
 
