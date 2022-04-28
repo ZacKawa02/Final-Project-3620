@@ -89,6 +89,10 @@
    	std::cout << config.at(12) << " " << config.at(14) << " " << config.at(16) << std::endl << std::endl;
    }
 
+   int Board_Tile::findBlank() {
+   	return config.find("0");
+   }
+
    void Board_Tile::moveLeft(int blank) {
    	char temp = config.at(blank - 2);
    	char empty = config.at(blank);
