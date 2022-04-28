@@ -8,6 +8,7 @@
 #include <string>
 #include <vector>
 #include <bits/stdc++.h>
+#include <queue>
 
 int main(int argc, char const *argv[]) {
   std::string initConfig = "012345678";

@@ -10,6 +10,7 @@
 #include <string>
 #include <vector>
 #include <bits/stdc++.h>
+#include <queue>
 
 class Sliding_Solver {
  public:
