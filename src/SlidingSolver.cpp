@@ -9,3 +9,13 @@
 #include <vector>
 #include <bits/stdc++.h>
 #include <queue>
+
+
+Sliding_Solver(std::string startConfig, std::string endConfig) {
+  
+}
+
+
+void Solve_Puzzle() {
+
+}
