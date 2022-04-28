@@ -96,6 +96,7 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank - 2, 1);
    	config.insert(blank - 2, 1, empty);
+    movesFromStart.append(L);
    }
 
    void Board_Tile::moveRight(int blank) {
@@ -105,6 +106,7 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank + 2, 1);
    	config.insert(blank + 2, 1, empty);
+    movesFromStart.append(R);
    }
 
    void Board_Tile::moveUp(int blank) {
@@ -114,6 +116,7 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank - 6, 1);
    	config.insert(blank - 6, 1, empty);
+    movesFromStart.append(U);
    }
 
    void Board_Tile::moveDown(int blank) {
@@ -123,4 +126,5 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank + 6, 1);
    	config.insert(blank + 6, 1, empty);
+    movesFromStart.append(D);
    }
