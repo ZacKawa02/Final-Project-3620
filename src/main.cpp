@@ -24,7 +24,11 @@ int main(int argc, char const *argv[]) {
   Board_Tile starter(initConfig);
   Board_Tile ender(endConfig);
 
-  std::cout << Board_Tile::Manhattan_Distance(&ender);
+  Sliding_Solver ss(initConfig, endConfig);
+
+  ss.makeHeap(starter.nextConfigs());
+
+  ss.Solve_Puzzle();
 
   return 0;
 }
