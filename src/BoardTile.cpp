@@ -142,7 +142,7 @@
    	configFluid.insert(blank, 1, temp);
    	configFluid.erase(blank - 2, 1);
    	configFluid.insert(blank - 2, 1, empty);
-    movesFromStart.append('L');
+    movesFromStart.append("L");
    }
 
    void Board_Tile::moveRight(int blank) {
@@ -152,7 +152,7 @@
    	configFluid.insert(blank, 1, temp);
    	configFluid.erase(blank + 2, 1);
    	configFluid.insert(blank + 2, 1, empty);
-    movesFromStart.append('R');
+    movesFromStart.append("R");
    }
 
    void Board_Tile::moveUp(int blank) {
@@ -162,7 +162,7 @@
    	configFluid.insert(blank, 1, temp);
    	configFluid.erase(blank - 6, 1);
    	configFluid.insert(blank - 6, 1, empty);
-    movesFromStart.append('U');
+    movesFromStart.append("U");
    }
 
    void Board_Tile::moveDown(int blank) {
@@ -172,7 +172,7 @@
    	configFluid.insert(blank, 1, temp);
    	configFluid.erase(blank + 6, 1);
    	configFluid.insert(blank + 6, 1, empty);
-    movesFromStart.append('D');
+    movesFromStart.append("D");
    }
 
    int Board_Tile::getmanhattanDistance(){
