@@ -84,12 +84,18 @@ class Board_Tile {
   */
   int getmanhattanDistance();
 
+  /*
+  * overloaded < operator to compare Board_Tiles directly in minHeap
+  */
+  bool operator< (const Board_Tile & bt)const;
+
  private:
 
   std::string config;
   std::string configFluid;
   std::string movesFromStart;
   int manhattanDistance;
+  std::string endConfig;
 
 };
 

@@ -177,3 +177,16 @@
    int Board_Tile::getmanhattanDistance(){
      return manhattanDistance;
    }
+
+   bool operator > (const Board_Tile & bt)const {
+     Board_Tile endBoard(endConfig);
+     if (manhattanDistance > bt.Manhattan_Distance(endBoard)) {
+       return true;
+     }
+     else if (manhattanDistance < bt.Manhattan_Distance(endBoard)) {
+       return false;
+     }
+     else {
+       return true;
+     }
+   }
