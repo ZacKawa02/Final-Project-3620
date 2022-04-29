@@ -13,13 +13,42 @@
      movesFromStart = "";
    }
 
+   Board_Tile::Board_Tile(const std::string& start, std::string mfs) {
+     config = start;
+     movesFromStart = mfs;
+   }
+
    std::vector<Board_Tile> Board_Tile::nextConfigs() {
      std::vector<Board_Tile> boardList;
-     std::cout << "Current Board: " << config << std::endl;
-     for (unsigned int i = 0; i < 3; i++) {
-       //Generate the next potential boards and put them into the vector
-       //Don't include the previous move or moves that go off the board!
+     if (config.back() != 'D'){
+       if (this.findBlank() != 12 && this.findBlank() != 14 && this.findBlank() != 16) {
+         Board_Tile moveD(config, movesFromStart);
+         moveD.moveDown();
+         boardList.push_back(moveD);
+       }
      }
+     if (config.back() != 'U'){
+       if (this.findBlank() != 0 && this.findBlank() != 2 && this.findBlank() != 4) {
+         Board_Tile moveU(config, movesFromStart);
+         moveD.moveUp();
+         boardList.push_back(moveU);
+       }
+     }
+     if (config.back() != 'L'){
+       if (this.findBlank() != 0 && this.findBlank() != 6 && this.findBlank() != 12) {
+         Board_Tile moveL(config, movesFromStart);
+         moveD.moveLeft();
+         boardList.push_back(moveL);
+       }
+     }
+     if (config.back() != 'R'){
+       if (this.findBlank() != 4 && this.findBlank() != 10 && this.findBlank() != 16) {
+         Board_Tile moveR(config, movesFromStart);
+         moveD.moveRight();
+         boardList.push_back(moveR);
+       }
+     }
+
    }
 
    int Board_Tile::numMoves() {
@@ -100,7 +129,7 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank - 2, 1);
    	config.insert(blank - 2, 1, empty);
-    movesFromStart.append(L);
+    movesFromStart.append('L');
    }
 
    void Board_Tile::moveRight(int blank) {
@@ -110,7 +139,7 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank + 2, 1);
    	config.insert(blank + 2, 1, empty);
-    movesFromStart.append(R);
+    movesFromStart.append('R');
    }
 
    void Board_Tile::moveUp(int blank) {
@@ -120,7 +149,7 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank - 6, 1);
    	config.insert(blank - 6, 1, empty);
-    movesFromStart.append(U);
+    movesFromStart.append('U');
    }
 
    void Board_Tile::moveDown(int blank) {
@@ -130,5 +159,5 @@
    	config.insert(blank, 1, temp);
    	config.erase(blank + 6, 1);
    	config.insert(blank + 6, 1, empty);
-    movesFromStart.append(D);
+    movesFromStart.append('D');
    }
