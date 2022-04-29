@@ -18,6 +18,11 @@ class Board_Tile {
   Board_Tile(const std::string& start);
 
   /*
+  * Constructor that passes the move history
+  */
+  Board_Tile(const std::string& start, std::string mfs);
+
+  /*
   * Returns a list of all possible next moves (excluding useless moves that
   * would return the board to it's previous state)
   */
@@ -45,9 +50,14 @@ class Board_Tile {
   void print();
 
   /*
-  * finds where the blank space (0) is
+  * finds where the blank space (0) is in config
   */
   int findBlank();
+
+  /*
+  * finds where the blank space (0) is in configFluid
+  */
+  int findBlankFluid();
 
   /*
   * Moves the blank space (0) left
@@ -73,6 +83,7 @@ class Board_Tile {
  private:
 
   std::string config;
+  std::string configFluid;
   std::string movesFromStart;
   int manhattanDistance;
 

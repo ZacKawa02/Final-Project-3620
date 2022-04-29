@@ -10,11 +10,13 @@
 
    Board_Tile::Board_Tile(const std::string& start) {
      config = start;
+     configFluid = start;
      movesFromStart = "";
    }
 
    Board_Tile::Board_Tile(const std::string& start, std::string mfs) {
      config = start;
+     configFluid = start;
      movesFromStart = mfs;
    }
 
@@ -127,42 +129,46 @@
    	return config.find("0");
    }
 
+   int Board_Tile::findBlank() {
+     return configFluid.find("0");
+   }
+
    void Board_Tile::moveLeft(int blank) {
-   	char temp = config.at(blank - 2);
-   	char empty = config.at(blank);
-   	config.erase(blank, 1);
-   	config.insert(blank, 1, temp);
-   	config.erase(blank - 2, 1);
-   	config.insert(blank - 2, 1, empty);
+   	char temp = configFluid.at(blank - 2);
+   	char empty = configFluid.at(blank);
+   	configFluid.erase(blank, 1);
+   	configFluid.insert(blank, 1, temp);
+   	configFluid.erase(blank - 2, 1);
+   	configFluid.insert(blank - 2, 1, empty);
     movesFromStart.append('L');
    }
 
    void Board_Tile::moveRight(int blank) {
-   	char temp = config.at(blank + 2);
-   	char empty = config.at(blank);
-   	config.erase(blank, 1);
-   	config.insert(blank, 1, temp);
-   	config.erase(blank + 2, 1);
-   	config.insert(blank + 2, 1, empty);
+   	char temp = configFluid.at(blank + 2);
+   	char empty = configFluid.at(blank);
+   	configFluid.erase(blank, 1);
+   	configFluid.insert(blank, 1, temp);
+   	configFluid.erase(blank + 2, 1);
+   	configFluid.insert(blank + 2, 1, empty);
     movesFromStart.append('R');
    }
 
    void Board_Tile::moveUp(int blank) {
-   	char temp = config.at(blank - 6);
-   	char empty = config.at(blank);
-   	config.erase(blank, 1);
-   	config.insert(blank, 1, temp);
-   	config.erase(blank - 6, 1);
-   	config.insert(blank - 6, 1, empty);
+   	char temp = configFluid.at(blank - 6);
+   	char empty = configFluid.at(blank);
+   	configFluid.erase(blank, 1);
+   	configFluid.insert(blank, 1, temp);
+   	configFluid.erase(blank - 6, 1);
+   	configFluid.insert(blank - 6, 1, empty);
     movesFromStart.append('U');
    }
 
    void Board_Tile::moveDown(int blank) {
-   	char temp = config.at(blank + 6);
-   	char empty = config.at(blank);
-   	config.erase(blank, 1);
-   	config.insert(blank, 1, temp);
-   	config.erase(blank + 6, 1);
-   	config.insert(blank + 6, 1, empty);
+   	char temp = configFluid.at(blank + 6);
+   	char empty = configFluid.at(blank);
+   	configFluid.erase(blank, 1);
+   	configFluid.insert(blank, 1, temp);
+   	configFluid.erase(blank + 6, 1);
+   	configFluid.insert(blank + 6, 1, empty);
     movesFromStart.append('D');
    }
