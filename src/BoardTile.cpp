@@ -112,6 +112,7 @@
          }
        }
      }
+     manhattanDistance = manDist;
      return manDist;
    }
 
