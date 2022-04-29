@@ -11,9 +11,7 @@
 #include <queue>
 
 
-  Sliding_Solver::Sliding_Solver(std::string startConfig, std::string endConfig) {
-
-  }
+  Sliding_Solver::Sliding_Solver(std::string startConfig, std::string endConfig) {}
 
   void Sliding_Solver::Solve_Puzzle() {
     Board_Tile currentBT;
