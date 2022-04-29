@@ -10,15 +10,18 @@
 #include <queue>
 
 
-  Sliding_Solver::Sliding_Solver(std::string startConfig, std::string endConfig) {}
+  Sliding_Solver::Sliding_Solver(std::string startConfig, std::string endConfig) {
+    sc = startConfig;
+    ec = endConfig;
+  }
 
   void Sliding_Solver::Solve_Puzzle() {
-    Board_Tile currentBT;
+    Board_Tile currentBT(sc);
     currentBT = tileQueue.top();
     while (!tileQueue.empty()) {
       tileQueue.pop();
     }
-    if (currentBT.configFluid != currentBT.endConfig) {
+    if (currentBT.configFluid() != currentBT.endConfig()) {
       this->makeHeap(currentBT.nextConfigs());
     }
     else {
