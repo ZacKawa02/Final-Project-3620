@@ -63,44 +63,49 @@
      for (unsigned int i = 0; i < 9; i++) {
        for (unsigned int j = 0; j < 9; j++) {
          // The "missing" tile isn't counted in Manhattan Distance calculations
+         // and if the tile is already in position add 0 to MD total
          if (goalString.at(2*i) == "0" || goalString.at(2*i) == config.at(2*i)) {
            manDist += 0;
          }
-         int distDefine = j - i;
-         //Find distance from ending position of current tile
-         switch (distDefine) {
-          case 1:
-          case -1:
-            manDist += 1;
-            break;
-          case 2:
-          case -2:
-            manDist += 2;
-            break;
-          case 3:
-          case -3:
-            manDist += 1;
-            break;
-          case 4:
-          case -4:
-            manDist += 2;
-            break;
-          case 5:
-          case -5:
-            manDist += 3;
-            break;
-          case 6:
-          case -6:
-            manDist += 2;
-            break;
-          case 7:
-          case -7:
-            manDist += 3;
-            break;
-          case 8:
-          case -8:
-            manDist += 4;
-            break;
+         // Find how far away the tiles are in their string representation
+         // then use that number to calculate how far away they are in MD
+         else if (goalString.at(2*j) == config.at(2*i)) {
+           int distDefine = j - i;
+           //Find distance from ending position of current tile
+           switch (distDefine) {
+            case 1:
+            case -1:
+             manDist += 1;
+             break;
+            case 2:
+            case -2:
+             manDist += 2;
+             break;
+            case 3:
+            case -3:
+             manDist += 1;
+             break;
+            case 4:
+            case -4:
+             manDist += 2;
+             break;
+            case 5:
+            case -5:
+             manDist += 3;
+             break;
+            case 6:
+            case -6:
+             manDist += 2;
+             break;
+            case 7:
+            case -7:
+             manDist += 3;
+             break;
+            case 8:
+            case -8:
+             manDist += 4;
+             break;
+           }
          }
        }
      }

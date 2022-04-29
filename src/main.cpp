@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
   std::string endConfig = "1 0 2 3 4 5 6 7 8";
 
   std::cout << "Please enter the starting config for the puzzle:" << std::endl;
-  std::cout << "(Example: \"0 1 2 3 4 5 6 7 8"\)"
+  std::cout << "(Example: 0 1 2 3 4 5 6 7 8)" << std::endl;
   std::cin >> initConfig;
   std::cout << "Please enter the ending config:" << std::endl;
   std::cin >> endConfig;
