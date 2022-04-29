@@ -34,8 +34,6 @@ class Sliding_Solver {
  private:
 
   std::priority_queue<Board_Tile, std::vector<Board_Tile>, std::greater<Board_Tile>> tileQueue;
-  std::string startC;
-  const Board_Tile& endBoard;
 
 };
 

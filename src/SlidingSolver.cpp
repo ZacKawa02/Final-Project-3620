@@ -12,7 +12,7 @@
 
 
   Sliding_Solver::Sliding_Solver(std::string startConfig, std::string endConfig) {
-
+    
   }
 
   void Sliding_Solver::Solve_Puzzle() {
