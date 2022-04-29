@@ -10,11 +10,13 @@
 
    Board_Tile::Board_Tile(const std::string& start) {
      config = start;
+     configFluid = start;
      movesFromStart = "";
    }
 
    Board_Tile::Board_Tile(const std::string& start, std::string mfs) {
      config = start;
+     configFluid = start;
      movesFromStart = mfs;
    }
 

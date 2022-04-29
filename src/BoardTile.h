@@ -17,6 +17,8 @@ class Board_Tile {
   */
   Board_Tile(const std::string& start);
 
+  Board_Tile(const std::string& start, std::string mfs);
+
   /*
   * Returns a list of all possible next moves (excluding useless moves that
   * would return the board to it's previous state)
@@ -73,6 +75,7 @@ class Board_Tile {
  private:
 
   std::string config;
+  std::string configFluid;
   std::string movesFromStart;
 
 };
