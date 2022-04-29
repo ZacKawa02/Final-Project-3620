@@ -79,6 +79,10 @@ class Board_Tile {
   */
   void moveDown(int blank);
 
+  /*
+  * returns manhattanDistance
+  */
+  int getmanhattanDistance();
 
  private:
 

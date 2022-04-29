@@ -173,3 +173,7 @@
    	configFluid.insert(blank + 6, 1, empty);
     movesFromStart.append('D');
    }
+
+   int Board_Tile::getmanhattanDistance(){
+     return manhattanDistance;
+   }
