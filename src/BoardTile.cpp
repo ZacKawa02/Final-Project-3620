@@ -12,6 +12,7 @@
      config = start;
      configFluid = start;
      movesFromStart = "";
+     manhattanDistance = 1;
    }
 
    Board_Tile::Board_Tile(const std::string& start, std::string mfs) {
