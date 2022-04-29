@@ -47,9 +47,14 @@ class Board_Tile {
   void print();
 
   /*
-  * finds where the blank space (0) is
+  * finds where the blank space (0) is in config
   */
   int findBlank();
+
+  /*
+  * finds where the blank space (0) is in configFluid
+  */
+  int findBlankFluid();
 
   /*
   * Moves the blank space (0) left

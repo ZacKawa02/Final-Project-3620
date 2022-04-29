@@ -129,6 +129,10 @@
    	return config.find("0");
    }
 
+   int Board_Tile::findBlank() {
+     return configFluid.find("0");
+   }
+
    void Board_Tile::moveLeft(int blank) {
    	char temp = configFluid.at(blank - 2);
    	char empty = configFluid.at(blank);
