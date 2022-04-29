@@ -17,6 +17,9 @@ class Board_Tile {
   */
   Board_Tile(const std::string& start);
 
+  /*
+  * Constructor that passes the move history
+  */
   Board_Tile(const std::string& start, std::string mfs);
 
   /*
