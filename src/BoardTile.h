@@ -74,6 +74,7 @@ class Board_Tile {
 
   std::string config;
   std::string movesFromStart;
+  int manhattanDistance;
 
 };
 

@@ -29,11 +29,13 @@ class Sliding_Solver {
   * Uses Board_Tile::nextConfigs to generate and push the Board_Tiles onto the
   * minHeap tileQueue
   */
-  void makeHeap();
-  
+  void makeHeap(std::vector<Board_Tile> list);
+
  private:
 
   std::priority_queue<Board_Tile, std::vector<Board_Tile>, std::greater<int>> tileQueue;
+  std::string startC;
+  const Board_Tile& endBoard;
 
 };
 
