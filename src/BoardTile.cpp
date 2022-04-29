@@ -131,7 +131,7 @@
    	return config.find("0");
    }
 
-   int Board_Tile::findBlank() {
+   int Board_Tile::findBlankFluid() {
      return configFluid.find("0");
    }
 
