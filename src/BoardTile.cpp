@@ -51,7 +51,7 @@
          boardList.push_back(moveR);
        }
      }
-
+     return boardList;
    }
 
    int Board_Tile::numMoves() {

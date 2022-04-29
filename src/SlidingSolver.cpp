@@ -12,11 +12,21 @@
 
 
   Sliding_Solver::Sliding_Solver(std::string startConfig, std::string endConfig) {
-    
+
   }
 
   void Sliding_Solver::Solve_Puzzle() {
-
+    Board_Tile currentBT;
+    currentBT = tileQueue.top();
+    while (!tileQueue.empty()) {
+      tileQueue.pop();
+    }
+    if (currentBT.configFluid != currentBT.endConfig) {
+      this->makeHeap(currentBT.nextConfigs());
+    }
+    else {
+      break;
+    }
   }
 
   void Sliding_Solver::makeHeap(std::vector<Board_Tile> list) {
