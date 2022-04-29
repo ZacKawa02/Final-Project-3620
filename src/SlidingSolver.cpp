@@ -24,7 +24,7 @@
     //for each Board_Tile in the list of next possible configurations, push
     //each to the heap using it's MD as a key
     for (unsigned int i = 0; i < list.size(); i++) {
-      key = (list.at(i)).Manhattan_Distance(endBoard);
+      key = list.at(i);
       tileQueue.push();
     }
   }
