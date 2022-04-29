@@ -179,7 +179,7 @@
      return manhattanDistance;
    }
 
-   bool operator > (const Board_Tile & bt)const {
+   bool Board_Tile::operator> (const Board_Tile & bt)const {
      Board_Tile endBoard(endConfig);
      if (manhattanDistance > bt.Manhattan_Distance(endBoard)) {
        return true;
