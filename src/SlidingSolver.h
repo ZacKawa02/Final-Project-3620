@@ -12,29 +12,29 @@
 #include <queue>
 
 class Sliding_Solver {
- public:
+public:
 
-  /*
-  * Constructor, takes in the initial and final configurations of the puzzle
-  */
-  Sliding_Solver(std::string startConfig, std::string endConfig);
+	/*
+	* Constructor, takes in the initial and final configurations of the puzzle
+	*/
+	Sliding_Solver(std::string startConfig, std::string endConfig);
 
-  /*
-  * Solves the puzzle using A* Search
-  */
-  void Solve_Puzzle();
+	/*
+	* Solves the puzzle using A* Search
+	*/
+	void Solve_Puzzle();
 
-  /*
-  * Uses Board_Tile::nextConfigs to generate and push the Board_Tiles onto the
-  * minHeap tileQueue
-  */
-  void makeHeap(std::vector<Board_Tile> list);
+	/*
+	* Uses Board_Tile::nextConfigs to generate and push the Board_Tiles onto the
+	* minHeap tileQueue
+	*/
+	void makeHeap(std::vector<Board_Tile> list);
 
- private:
+private:
 
-  std::priority_queue<Board_Tile, std::vector<Board_Tile>, std::greater<Board_Tile>> tileQueue;
-  std::string sc;
-  std::string ec;
+	std::priority_queue<Board_Tile, std::vector<Board_Tile>, std::greater<Board_Tile>> tileQueue;
+	std::string sc;
+	std::string ec;
 
 };
 
