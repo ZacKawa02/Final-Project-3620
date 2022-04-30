@@ -15,17 +15,17 @@ int main(int argc, char const* argv[]) {
 
 	std::cout << "Please enter the starting config for the puzzle:" << std::endl;
 	std::cout << "(Example: 0 1 2 3 4 5 6 7 8)" << std::endl;
-	std::cin >> initConfig;
+	getline(std::cin, initConfig);
 	std::cout << "Please enter the ending config:" << std::endl;
-	std::cin >> endConfig;
+	getline(std::cin, endConfig);
 	std::cout << "-------------------------------------" << std::endl;
 
-	Board_Tile starter(initConfig);
-	Board_Tile ender(endConfig);
+	Board_Tile starter(initConfig, endConfig);
+	Board_Tile ender(endConfig, endConfig);
 
 	Sliding_Solver ss(initConfig, endConfig);
 
-	ss.makeHeap(starter.nextConfigs());
+	//ss.makeHeap(starter.nextConfigs());
 
 	ss.Solve_Puzzle();
 

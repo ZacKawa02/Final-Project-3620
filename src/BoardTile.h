@@ -15,18 +15,18 @@ public:
 	/*
 	* Constructor takes a beginning configuration and creates the starting board
 	*/
-	Board_Tile(const std::string& start);
+	Board_Tile(const std::string& start, std::string end);
 
 	/*
 	* Constructor that passes the move history
 	*/
-	Board_Tile(const std::string& start, std::string mfs);
+	Board_Tile(const std::string& start, std::string mfs, std::string end);
 
 	/*
 	* Returns a list of all possible next moves (excluding useless moves that
 	* would return the board to it's previous state)
 	*/
-	std::vector<Board_Tile> nextConfigs();
+	std::vector<Board_Tile*> nextConfigs();
 
 	/*
 	* returns the number of steps so far
@@ -37,7 +37,7 @@ public:
 	* Calculates and returns the manhattan distance of the current board as
 	* compared to the desired final configuration of the board
 	*/
-	int Manhattan_Distance(const Board_Tile& goalconfig);
+	int Manhattan_Distance(Board_Tile goalconfig);
 
 	/*
 	* returns the string stored in config
@@ -48,6 +48,8 @@ public:
 	* pritns out our tiles all nice like for the user
 	*/
 	void print();
+
+	void printFinal();
 
 	/*
 	* finds where the blank space (0) is in config
@@ -88,10 +90,12 @@ public:
 
 	std::string getEndConfig();
 
+	std::string getMovesFromStart();
+
 	/*
 	* overloaded < operator to compare Board_Tiles directly in minHeap
 	*/
-	bool operator> (const Board_Tile& bt)const;
+	bool operator> (Board_Tile bt);
 
 private:
 
